@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html>
-<!-- Text between angle brackets is an HTML tag and is not displayed.
-Most tags, such as the HTML and /HTML tags that surround the contents of
-a page, come in pairs; some tags, like HR, for a horizontal rule, stand 
-alone. Comments, such as the text you're reading, are not displayed when
-the Web page is shown. The information between the HEAD and /HEAD tags is 
-not displayed. The information between the BODY and /BODY tags is displayed.-->
+<html lang="en">
 <head>
-<title>Enter a title, displayed at the top of the window.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Timestamp Microservice</title>
 </head>
-<!-- The information between the BODY and /BODY tags is displayed.-->
 <body>
-<h1>Enter the main heading, usually the same as the title.</h1>
-<p>Be <b>bold</b> in stating your key points. Put them in a list: </p>
-<ul>
-<li>The first item in your list</li>
-<li>The second item; <i>italicize</i> key words</li>
-</ul>
-<p>Improve your image by including an image. </p>
-<p><img src="http://www.mygifs.com/CoverImage.gif" alt="A Great HTML Resource"></p>
-<p>Add a link to your favorite <a href="http://www.dummies.com/">Web site</a>.
-Break up your page with a horizontal rule or two. </p>
-<hr>
-<p>Finally, link to <a href="page2.html">another page</a> in your own Web site.</p>
-<!-- And add a copyright notice.-->
-<p>&#169; Wiley Publishing, 2011</p>
+<div class="container">
+    <h1 class="header">API Basejump: Timestamp Microservice</h1>
+    <p>By Karan Satia
+        <a href="https://github.com/ksatia/express.js-api-project">Project GitHub</a></p>
+    <blockquote>User Stories:
+        <ol>
+            <li>I can pass a string as a parameter, and it will check to see whether that string contains either a unix
+                timestamp or a natural language date (example: January 1, 2016)
+            </li>
+            <li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+            <li>If it does not contain a date or Unix timestamp, it returns <code>null</code> for those properties.</li>
+        </ol>
+    </blockquote>
+    <h2>Example usage:</h2>
+    <code>https://saintpeter-ts-micro.herokuapp.com/December%2015,%202015</code><br>
+    <code>https://saintpeter-ts-micro.herokuapp.com/1450137600</code>
+    <h2>Example output:</h2>
+    <code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code><br>
+    <code>{ "unix": null, "natural": null }</code>
+</div>
 </body>
 </html>
