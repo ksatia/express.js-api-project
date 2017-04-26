@@ -15,7 +15,7 @@ app.get('/', function(req,res){
 app.get('/:date', function(req, res){
     //res.send() assumes the content-type of the response to be html and then calls end whereas res.end() makes no such assumption
     res.json(routingResponse(req));
-}).listen(8080)
+}).listen(process.env.PORT);
 
 
 
